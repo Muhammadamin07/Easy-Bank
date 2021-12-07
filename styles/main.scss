@@ -1,0 +1,456 @@
+$primaryColor: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+$SecondaryColor:  #30C88F;
+$ThirdColor: #2D314D;
+$silver:  #9597A5;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans&display=swap');
+@import 'extastyle';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{ 
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Public Sans', sans-serif;
+}
+
+header{
+    padding: 250px 0px 170px;
+    background-color: #F2F2F2;
+    background: url('../source/header/backgroundImage.svg') no-repeat right;
+    position: relative;
+}
+
+.header-navigation{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 18px 0;
+    background-color: #fff;
+    z-index: 999;
+}
+
+
+.header-navigation .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-navigation-links a{
+    padding: 10px 35px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.107692px;
+    color: #9597A5;
+    text-decoration: none;
+}
+
+.header-navigation-button a{
+    @include linkButtonPrimary()
+}
+
+.header-navigation-button button{
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+
+.header-content h1{
+    font-style: normal;
+    font-weight: 100;
+    font-size: 56px;
+    line-height: 64px;
+    /* or 114% */
+
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    color: #2D314D;
+}
+
+.header-content p{
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+    margin-bottom: 35px;
+    letter-spacing: -0.28125px;
+    max-width: 445px;
+    color: #9597A5;
+}
+
+.header-content a{
+    @include linkButtonPrimary()
+}
+
+
+.special-phone{
+    position: absolute;
+    top: 9%;
+    right: 0;
+}
+
+
+//  ----------------------------------------------------------------  Section 1      ----------------------------------------------------------------//
+
+.section1{
+    background: #F4F5F7;
+    padding: 96px 0px;
+    & h1{
+        font-style: normal;
+        font-weight: 100;
+        font-size: 40px;
+        line-height: 64px;
+        /* identical to box height, or 160% */
+        letter-spacing: -0.714286px;
+        color: #2D314D;
+        margin-bottom: 16px;
+    }
+
+    & p{
+        font-size: 18px;
+        line-height: 28px;
+        /* or 156% */
+        letter-spacing: -0.28125px;
+        max-width: 635px;
+        color: #9597A5;
+        margin-bottom: 72px;
+    }
+
+    &-cardWrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-card{
+            max-width: 255px;
+            & img{
+                width: 72px;
+                height: 72px;
+                margin-bottom: 40px;
+            }
+
+            & h1{
+                font-style: normal;
+                font-weight: 100;
+                font-size: 24px;
+                line-height: 28px;
+                /* identical to box height, or 117% */
+                letter-spacing: -0.428571px;
+                color: #2D314D;
+                margin-bottom: 25px;
+            }
+
+            & p{
+                font-size: 16px;
+                line-height: 26px;
+                /* or 162% */
+                letter-spacing: -0.25px;
+                color: #9597A5;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+// ------------------------------------------------------ section 2 -------------------------------------------------- ///
+
+
+.section2{
+    padding: 80px 0px;
+    background: #F2F2F2;
+    &__title{
+        font-style: normal;
+        font-weight: 100;
+        font-size: 40px;
+        line-height: 64px;
+        /* identical to box height, or 160% */
+        letter-spacing: -0.714286px;
+        color: #2D314D;
+        margin-bottom: 40px;
+    }
+
+    &-cardWrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        &-card{
+            max-width: 255px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #fff;
+            &-content{
+                padding: 25px 24px;
+            }
+            & img{
+                width: 100%;
+                object-fit: contain;
+            }
+            & h1{
+                font-style: normal;
+                font-weight: 100;
+                font-size: 16px;
+                line-height: 20px;
+                /* or 125% */
+                letter-spacing: -0.285714px;
+                color: #2D314D;
+                margin-bottom: 10px;
+            }
+
+            & span{
+                font-size: 10px;
+                line-height: 18px;
+                /* identical to box height, or 180% */
+                letter-spacing: -0.15625px;
+                color: #9597A5;
+            }
+
+            & p{
+                font-size: 13px;
+                line-height: 18px;
+                /* or 138% */
+                letter-spacing: -0.203125px;
+                color: #9597A5;
+            }
+        }
+    }
+}
+
+
+// ----------------------------------------- Foooter -------------------------------//
+
+footer{
+    background: #2D314D;
+    padding: 48px 0px;
+}
+
+
+footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+
+.footer{
+    &-navigation{
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+        align-items: center;
+        &-logoSide{
+            &__logo{
+                margin-bottom: 55px;
+            }
+            &-network{
+                & a{
+                    padding: 6px;
+                    display: inline-block;
+                }
+
+                & img:hover{
+                    fill: #30C88F;
+                }
+            }
+        }
+        &-navItems{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            & a{
+                padding: 4px;
+                font-size: 15px;
+                line-height: 26px;
+                letter-spacing: -0.234375px;
+                color: #FFFFFF;
+                text-decoration: none;
+                &:hover{
+                        color: #30C88F;
+                    
+                }
+            }
+        }
+    }
+
+
+    &-invite{
+        & a{
+            @include linkButtonPrimary();
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        & p{
+            font-size: 15px;
+            line-height: 26px;
+            /* identical to box height, or 173% */
+            text-align: right;
+            letter-spacing: -0.234375px;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+    header{
+        padding: 400px 0px 170px;
+        background-color: #F2F2F2;
+        background-image: url('../source/header/mobileBackground.svg');
+        background-position: 0px 0px;
+        background-size: contain;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .header-navigation{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 18px 0;
+        background-color: #fff;
+        padding: 22px 24px;
+        z-index: 999;
+    }
+    
+    
+    .header-navigation .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .header-navigation-links{
+        display: none;
+    }
+
+    .header-navigation-links a{
+        padding: 10px 35px;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -0.107692px;
+        color: #9597A5;
+        text-decoration: none;
+    }
+    
+    .header-navigation-button a{
+        @include linkButtonPrimary();
+        display: none;
+    }
+
+    .header-navigation-button button{
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+    
+    .header-content{
+        padding: 24px;
+        text-align: center;
+    }
+    
+    .header-content h1{
+        font-style: normal;
+        font-weight: 100;
+        font-size: 40px;
+        line-height: 47px;
+        letter-spacing: -0.714286px;
+        color: #2D314D;
+    }
+    
+    .header-content p{
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.234375px;
+        color: #9597A5;
+    }
+    
+    .header-content a{
+        @include linkButtonPrimary()
+    }
+    
+    
+    .special-phone{
+        position: relative;
+        display: none;
+        top: 9%;
+        right: 0;
+    }
+
+
+
+//  ----------------------------------------------------------------  Section 1      ----------------------------------------------------------------//
+    .section1{
+        text-align: center;
+        &-cardWrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    //  ------------------------------ section 2 ------------------------------ //
+
+    .section2{
+        &__title{
+            text-align: center;
+        }
+
+        &-cardWrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-card{
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    footer .container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer{
+        &-navigation{
+            flex-direction: column;
+            
+            &-logoSide{
+                    margin-bottom: 32px;
+                    flex-direction: column;
+            }
+            &-navItems{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                &:last-child{
+                    margin-bottom: 32px;
+                }
+                & a{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
